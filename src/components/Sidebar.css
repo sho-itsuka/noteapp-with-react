@@ -42,6 +42,11 @@ button {
   opacity:          0.5;
 }
 
+.app-sidebar-note.active {
+  background-color: #afb8bd;
+  opacity:          0.5;
+}
+
 .app-sidebar-note p {
   margin: 10px 0;
 }
