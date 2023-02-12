@@ -7,7 +7,7 @@ import Main    from './components/Main'
 import './App.css'
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes,      setNotes]      = useState([]);
   const [activeNote, setActiveNote] = useState(false);
 
   const onAddNote = () => {
@@ -28,10 +28,10 @@ function App() {
   return (
     <div className='App'>
       <Sidebar
-        onAddNote={onAddNote}
-        notes={notes}
-        onDeleteNote={onDeleteNote}
-        activeNote={activeNote}
+        onAddNote=    {onAddNote}
+        notes=        {notes}
+        onDeleteNote= {onDeleteNote}
+        activeNote=   {activeNote}
         setActiveNote={setActiveNote}
       />
       <Main />
