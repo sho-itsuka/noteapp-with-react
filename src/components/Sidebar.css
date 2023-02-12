@@ -10,9 +10,9 @@ button {
 }
 
 .app-sidebar {
-  width:        30%;
-  height:       100vh;
-  border-right: 1px solid #ddd;
+  width:            30%;
+  height:           100vh;
+  border-right:     1px solid #ddd;
   background-color: #f5f5f5;
 }
 
@@ -38,7 +38,7 @@ button {
 }
 
 .app-sidebar-note:hover {
-  background-color: rgb(175, 184, 189);
+  background-color: #afb8bd;
   opacity:          0.5;
 }
 
