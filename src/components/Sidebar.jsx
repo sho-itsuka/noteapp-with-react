@@ -1,6 +1,9 @@
 import React from "react";
 import "./Sidebar.css";
 
+/**
+ * Sidebar コンポーネント
+ */
 const Sidebar = ({
   onAddNote,
   notes,

@@ -1,13 +1,22 @@
 import React from "react";
 import "./Main.css";
 
-const Main = ({activeNote}) => {
-  const onEditNote = () => {}
+/**
+ * Main コンポーネント
+ */
+const Main = ({activeNote, onUpdateNote }) => {
+  const onEditNote = (key, value) => {
+    onUpdateNote({
+      ...activeNote,
+      [key]:   value,
+      modDate: Date.now
+    })
+  }
 
   if (!activeNote) {
     return <div className="no-active-note">ノートが選択されていません！</div>
   };
-  
+
   return (
     <div className="app-main">
       <div className="app-main-note-edit">
