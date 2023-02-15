@@ -13,13 +13,13 @@
 
 .app-main-note-edit input, textarea {
   display:       block;
-  bottom:        1px solid #ddd;
+  border:        1px solid #ddd;
   margin-bottom: 20px;
   width:         100%;
   height:        calc(50vh - 130px);
   padding:       5px;
   resize:        none;
-  font-style:    16px;
+  font-size:     16px;
 }
 
 .app-main-note-edit input {
