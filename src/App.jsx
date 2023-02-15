@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import uuid         from 'react-uuid';
+import { useEffect, useState } from 'react';
+import uuid                    from 'react-uuid';
 
 import Sidebar from './components/Sidebar';
 import Main    from './components/Main';
@@ -10,8 +10,15 @@ import './App.css';
  * App コンポーネント
  */
 function App() {
-  const [notes,      setNotes]      = useState([]);
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes")) || []
+  );
   const [activeNote, setActiveNote] = useState(false);
+
+  useEffect(() =>{
+    // ローカルストレージにノートを保存
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   /**
    * ノートを追加する
@@ -24,6 +31,7 @@ function App() {
       modDate: Date.now(),
     };
     setNotes([...notes, newNote]);
+    console.log(notes)
   };
 
   /**
