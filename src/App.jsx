@@ -15,10 +15,19 @@ function App() {
   );
   const [activeNote, setActiveNote] = useState(false);
 
+  /**
+   * ローカルストレージにノートを保存
+   */
   useEffect(() =>{
-    // ローカルストレージにノートを保存
     localStorage.setItem("notes", JSON.stringify(notes));
   }, [notes]);
+
+  /**
+   * ページを開くとノートの1番目が選択される
+   */
+  useEffect(() =>{
+    setActiveNote(notes[0].id)
+  }, []);
 
   /**
    * ノートを追加する
